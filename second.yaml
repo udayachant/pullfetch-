@@ -1,0 +1,8 @@
+- hosts: all
+  remote-user: ec2-user
+  become: yes
+  tasks:
+     - name: install
+       yum:
+          name: nginx
+          state: present
